@@ -5,9 +5,13 @@ type Props = {}
 
 export default function Bookings({}: Props) {
   return (
-    <div>
+    <div className='page-container section'>
       Bookings, babe.
-      <BookingForm/>
+
+      <div className='mx-8'>
+        <BookingForm/>
+      </div>
+      
     </div>
   )
 }

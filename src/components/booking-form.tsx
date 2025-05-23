@@ -1,13 +1,12 @@
 'use client'
-import React, { useState } from 'react'
-import  { date, number, z } from 'zod'
+import React from 'react'
+import  { z } from 'zod'
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { Button } from "@/components/ui/button"
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -35,7 +34,7 @@ const formSchema = z.object({
       .max(10, "Phone number is too long")
       .regex(/^[0-9+\-\s()]*$/, "Invalid phone number format"),
   email: z.string().email(),
-  date: z.date(),
+  datetime: z.date(),
   message: z.string()
 })
 
@@ -47,7 +46,7 @@ export default function BookingForm({}: Props) {
         name: "",
         phone: "",
         email:  "",
-        date: new Date(),
+        datetime: new Date(),
         message: "",
       },
     })
@@ -57,15 +56,15 @@ export default function BookingForm({}: Props) {
     console.log(values)
   }
   return (
-    <div className='p-10 px-20'>
+    <div className=''>
       <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 card">
           <FormField
             control={form.control}
             name="name"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Full Name</FormLabel>
+                <FormLabel>Full Name*</FormLabel>
                 <FormControl>
                   <Input placeholder="Jill Jillson" {...field} />
                 </FormControl>
@@ -78,7 +77,7 @@ export default function BookingForm({}: Props) {
             name="phone"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Phone Number</FormLabel>
+                <FormLabel>Phone Number*</FormLabel>
                 <FormControl>
                   <Input placeholder="0412345678" {...field} />
                 </FormControl>
@@ -91,7 +90,7 @@ export default function BookingForm({}: Props) {
             name="email"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Email</FormLabel>
+                <FormLabel>Email*</FormLabel>
                 <FormControl>
                   <Input placeholder="hello@..." {...field} />
                 </FormControl>
@@ -101,10 +100,10 @@ export default function BookingForm({}: Props) {
           />
           <FormField
             control={form.control}
-            name="date"
+            name="datetime"
             render={({ field }) => (
               <FormItem className="flex flex-col">
-                <FormLabel>Preferred Date and Time</FormLabel>
+                <FormLabel>Preferred Date and Time*</FormLabel>
                 <Popover>
                   <PopoverTrigger asChild>
                     <FormControl>
@@ -157,8 +156,8 @@ export default function BookingForm({}: Props) {
                 <FormLabel>Message</FormLabel>
                 <FormControl>
                   <Textarea
-                    placeholder="Tell us a about what you're looking for"
-                    className="resize-none"
+                    placeholder="Tell us what you're looking for"
+                    className=""
                     {...field}
                   />
                 </FormControl>

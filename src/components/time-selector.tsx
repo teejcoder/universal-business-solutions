@@ -62,10 +62,13 @@ export const TimeSelector = ({
           <SelectValue />
         </SelectTrigger>
         <SelectContent>
-          <SelectItem value="0">00</SelectItem>
-          <SelectItem value="15">15</SelectItem>
-          <SelectItem value="30">30</SelectItem>
-          <SelectItem value="45">45</SelectItem>
+          {["00",15,30,45].map((m) => (
+            <SelectItem key={m} value={String(m)}>
+              {m}
+            </SelectItem>
+          ))
+          
+          }
         </SelectContent>
       </Select>
       

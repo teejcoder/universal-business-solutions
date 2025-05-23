@@ -111,6 +111,72 @@
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
 }
+@layer components {
+  .section {
+    @apply py-12 md:py-16;
+  }
+  
+  .section-sm {
+    @apply py-8 md:py-10;
+  }
+  
+  .section-lg {
+    @apply py-16 md:py-24;
+  }
+}
+
+@layer utilities {
+  .page-container {
+    @apply w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 
+           flex flex-col items-center;
+  }
+
+  /* Variant with more padding for content-heavy pages */
+  .page-container-wide {
+    @apply w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-10 py-6 md:py-8
+           flex flex-col items-center;
+  }
+  
+  /* Narrow variant for form pages */
+  .page-container-narrow {
+    @apply w-full max-w-3xl mx-auto px-4 sm:px-6 py-6
+           flex flex-col items-center;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-card text-card-foreground rounded-lg border border-border shadow-sm p-6;
+  }
+
+  /* Variants */
+  .card-hover {
+    @apply hover:shadow-md transition-shadow duration-200;
+  }
+
+  .card-interactive {
+    @apply hover:border-primary/20 hover:shadow-md hover:shadow-primary/5 
+           active:shadow-sm cursor-pointer transition-all duration-200;
+  }
+
+  /* Sizes */
+  .card-sm {
+    @apply p-4;
+  }
+
+  .card-lg {
+    @apply p-8;
+  }
+
+  /* Style variations */
+  .card-subtle {
+    @apply bg-muted/50 border-muted;
+  }
+
+  .card-accent {
+    @apply border-l-4 border-l-primary;
+  }
+}
 
 @layer base {
   * {
