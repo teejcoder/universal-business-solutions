@@ -1,6 +1,6 @@
 'use client'
 import React, { useState } from 'react'
-import  { z } from 'zod'
+import  { date, number, z } from 'zod'
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { Button } from "@/components/ui/button"
@@ -13,23 +13,33 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form"
+
 import { Input } from "@/components/ui/input"
 import { Textarea } from './ui/textarea'
 import { toast } from 'sonner'
+import { Popover, PopoverContent, PopoverTrigger } from './ui/popover'
+import { Calendar } from './ui/calendar'
+import { CalendarIcon } from 'lucide-react'
+import { cn } from '@/lib/utils'
+import { format } from 'date-fns'
+import { TimeSelector } from './time-selector'
 
 type Props = {}
 
 const formSchema = z.object({
   name: z.string().min(2, 
-    // {message:'name must be atleast 2 letters'}
+    {message:'Enter your Full Name'}
   ).max(50),
-  phone: z.string().max(10),
+  phone: z.string()
+      .min(10, "Phone number must be 10 digits")
+      .max(10, "Phone number is too long")
+      .regex(/^[0-9+\-\s()]*$/, "Invalid phone number format"),
   email: z.string().email(),
+  date: z.date(),
   message: z.string()
 })
 
 export default function BookingForm({}: Props) {
-  const [date, setDate] = useState<Date | undefined>(new Date())
 
   const form = useForm<z.infer<typeof formSchema>>({
       resolver: zodResolver(formSchema),
@@ -37,6 +47,7 @@ export default function BookingForm({}: Props) {
         name: "",
         phone: "",
         email:  "",
+        date: new Date(),
         message: "",
       },
     })
@@ -54,6 +65,7 @@ export default function BookingForm({}: Props) {
             name="name"
             render={({ field }) => (
               <FormItem>
+                <FormLabel>Full Name</FormLabel>
                 <FormControl>
                   <Input placeholder="Jill Jillson" {...field} />
                 </FormControl>
@@ -66,6 +78,7 @@ export default function BookingForm({}: Props) {
             name="phone"
             render={({ field }) => (
               <FormItem>
+                <FormLabel>Phone Number</FormLabel>
                 <FormControl>
                   <Input placeholder="0412345678" {...field} />
                 </FormControl>
@@ -78,6 +91,7 @@ export default function BookingForm({}: Props) {
             name="email"
             render={({ field }) => (
               <FormItem>
+                <FormLabel>Email</FormLabel>
                 <FormControl>
                   <Input placeholder="hello@..." {...field} />
                 </FormControl>
@@ -87,9 +101,60 @@ export default function BookingForm({}: Props) {
           />
           <FormField
             control={form.control}
+            name="date"
+            render={({ field }) => (
+              <FormItem className="flex flex-col">
+                <FormLabel>Preferred Date and Time</FormLabel>
+                <Popover>
+                  <PopoverTrigger asChild>
+                    <FormControl>
+                      <Button
+                        variant="outline"
+                        className={cn(
+                          "w-full pl-3 text-left font-normal",
+                          !field.value && "text-muted-foreground"
+                        )}
+                      >
+                        {field.value ? (
+                          format(field.value, "PPP 'at' h:mm a")
+                        ) : (
+                          <span>Pick a date</span>
+                        )}
+                        <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />
+                      </Button>
+                    </FormControl>
+                  </PopoverTrigger>
+                  <PopoverContent className="w-auto p-0" align="start">
+                    <Calendar
+                      mode="single"
+                      selected={field.value}
+                      onSelect={(date) => {
+                        if (date) {
+                          const currentTime = field.value || new Date();
+                          date.setHours(currentTime.getHours());
+                          date.setMinutes(currentTime.getMinutes());
+                          field.onChange(date)
+                        }
+                      }}
+                      disabled={(date) => date < new Date()}
+                      initialFocus
+                    />
+                    <div className="border-t border-border p-3">
+                      <div className="font-medium text-sm mb-2">Select Time</div>
+                      <TimeSelector date={field.value} onChange={field.onChange} />
+                    </div>
+                  </PopoverContent>
+                </Popover>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
             name="message"
             render={({ field }) => (
               <FormItem>
+                <FormLabel>Message</FormLabel>
                 <FormControl>
                   <Textarea
                     placeholder="Tell us a about what you're looking for"
