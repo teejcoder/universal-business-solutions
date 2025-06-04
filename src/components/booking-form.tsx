@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+import React, { useState } from 'react'
 import  { z } from 'zod'
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
@@ -18,11 +18,12 @@ import { Textarea } from './ui/textarea'
 import { toast } from 'sonner'
 import { Popover, PopoverContent, PopoverTrigger } from './ui/popover'
 import { Calendar } from './ui/calendar'
-import { CalendarIcon } from 'lucide-react'
+import { CalendarIcon, Loader, LoaderCircle, LoaderPinwheelIcon } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { format } from 'date-fns'
 import { TimeSelector } from './time-selector'
 import { PopoverClose } from '@radix-ui/react-popover'
+import axios from 'axios'
 
 type Props = {}
 
@@ -40,6 +41,7 @@ const formSchema = z.object({
 })
 
 export default function BookingForm({}: Props) {
+  const [loading, setLoading] = useState(false);
 
   const form = useForm<z.infer<typeof formSchema>>({
       resolver: zodResolver(formSchema),
@@ -52,9 +54,17 @@ export default function BookingForm({}: Props) {
       },
     })
  
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    toast.success("Booking has been made!")
-    console.log(values)
+  const onSubmit = async (values: z.infer<typeof formSchema>) => {
+    try {
+      setLoading(true);
+      const response = await axios.post('/api/bookings', values)
+      setLoading(false);
+      toast.success("Booking has been made!")
+      console.log(values, response)
+    }
+    catch(err) {
+      console.error('error in booking-form Mongo API connection', err)
+    }
   }
   
   return (
@@ -187,7 +197,7 @@ export default function BookingForm({}: Props) {
               </FormItem>
             )}
           />
-          <Button type="submit" className='w-full'>Submit</Button>
+          <Button type="submit" className='w-full'>Submit {loading && <Loader rotate={1} /> }</Button>
         </form>
       </Form>
     </div>
