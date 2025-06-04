@@ -56,6 +56,7 @@ export default function BookingForm({}: Props) {
     toast.success("Booking has been made!")
     console.log(values)
   }
+  
   return (
     <div className="">
       <Form {...form}>
