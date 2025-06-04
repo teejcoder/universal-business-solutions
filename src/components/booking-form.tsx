@@ -57,7 +57,7 @@ export default function BookingForm({}: Props) {
     console.log(values)
   }
   return (
-    <div className=''>
+    <div className="">
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 card">
           <FormField
