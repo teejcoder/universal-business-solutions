@@ -22,6 +22,7 @@ import { CalendarIcon } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { format } from 'date-fns'
 import { TimeSelector } from './time-selector'
+import { PopoverClose } from '@radix-ui/react-popover'
 
 type Props = {}
 
@@ -103,7 +104,7 @@ export default function BookingForm({}: Props) {
             name="datetime"
             render={({ field }) => (
               <FormItem className="flex flex-col">
-                <FormLabel>Preferred Date and Time*</FormLabel>
+                <FormLabel>Date and Time*</FormLabel>
                 <Popover>
                   <PopoverTrigger asChild>
                     <FormControl>
@@ -123,24 +124,44 @@ export default function BookingForm({}: Props) {
                       </Button>
                     </FormControl>
                   </PopoverTrigger>
-                  <PopoverContent className="w-auto p-0" align="start">
-                    <Calendar
-                      mode="single"
-                      selected={field.value}
-                      onSelect={(date) => {
-                        if (date) {
-                          const currentTime = field.value || new Date();
-                          date.setHours(currentTime.getHours());
-                          date.setMinutes(currentTime.getMinutes());
-                          field.onChange(date)
-                        }
-                      }}
-                      disabled={(date) => date < new Date()}
-                      initialFocus
-                    />
-                    <div className="border-t border-border p-3">
-                      <div className="font-medium text-sm mb-2">Select Time</div>
-                      <TimeSelector date={field.value} onChange={field.onChange} />
+                  <PopoverContent 
+                    className="w-auto max-w-[95vw]" 
+                    align="start" 
+                    alignOffset={0} 
+                    side="bottom" 
+                    sideOffset={8} 
+                    avoidCollisions={true}
+                  >
+                    <div className="max-h-[80vh] overflow-auto">
+                      <Calendar
+                        className='flex items-center justify-center'
+                        mode="single"
+                        selected={field.value}
+                        onSelect={(date) => {
+                          if (date) {
+                            const currentTime = field.value || new Date();
+                            date.setHours(currentTime.getHours());
+                            date.setMinutes(currentTime.getMinutes());
+                            field.onChange(date)
+                          }
+                        }}
+                        disabled={(date) => date < new Date()}
+                        initialFocus
+                      />
+                      <div className="border-t border-border p-3 space-y-3">
+                        <div className="font-medium text-sm mb-2">Select Time</div>
+                        <TimeSelector date={field.value} onChange={field.onChange} />
+                        <PopoverClose asChild>
+                          <Button 
+                            variant="default" 
+                            size="lg"
+                            type="button"
+                            className='w-full'
+                          >
+                            Done
+                          </Button>
+                        </PopoverClose>
+                      </div>
                     </div>
                   </PopoverContent>
                 </Popover>
@@ -165,7 +186,7 @@ export default function BookingForm({}: Props) {
               </FormItem>
             )}
           />
-          <Button type="submit">Submit</Button>
+          <Button type="submit" className='w-full'>Submit</Button>
         </form>
       </Form>
     </div>

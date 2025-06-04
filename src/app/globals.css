@@ -156,7 +156,7 @@
 
   .card-interactive {
     @apply hover:border-primary/20 hover:shadow-md hover:shadow-primary/5 
-           active:shadow-sm cursor-pointer transition-all duration-200;
+    active:shadow-sm cursor-pointer transition-all duration-200;
   }
 
   /* Sizes */

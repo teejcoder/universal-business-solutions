@@ -1,11 +1,11 @@
 export default function Home() {
 
   return (
-    <div>
-      <main className="page-container">
-        <h1>Hey, babe.</h1>
+    <div className="page-container">
+      <main>
+        <h1>Hey, babe. Main page</h1>
       </main>
-      <footer className="page-container">
+      <footer className="">
         <span className="text-xs">Copyright | {new Date().getFullYear()}</span>
       </footer>
     </div>

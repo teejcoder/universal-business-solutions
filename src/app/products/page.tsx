@@ -2,10 +2,10 @@ import React from "react"
 
 type Props = {}
 
-export default function About({}: Props) {
+export default function Products({}: Props) {
   return (
     <div>
-      About, babe
+      Products page, babe
     </div>
   )
 }
