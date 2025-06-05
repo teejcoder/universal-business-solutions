@@ -14,3 +14,21 @@ export async function POST(request: Request){
         return NextResponse.json({ error: "Failed to create booking" }, { status: 500 });
     }
 }
+
+export async function GET(request: Request){
+    try {
+        // connect to db
+        await dbConnect();
+        //get all info for "bookings"
+        const bookings = await Booking.find({}).sort({createdAt: -1})
+
+        console.log(`retrieved ${bookings.length} bookings`)
+
+        //return json and status 200
+        return NextResponse.json(bookings, {status: 200})
+
+    } catch(err){
+        console.error("Error in GET /api/bookings:", err)
+        return NextResponse.json({error: "Failed to fetch bookings"}, {status: 500})
+    }
+}
