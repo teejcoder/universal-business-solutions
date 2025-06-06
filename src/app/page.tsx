@@ -1,13 +1,18 @@
+import Bookings from "@/components/bookings/Bookings";
+import Hero from "@/components/hero/Hero";
+import Products from "@/components/products/Products";
+import Services from "@/components/services/Services";
+
 export default function Home() {
 
   return (
-    <div className="page-container">
-      <main>
-        <h1>Hey, babe. Main page</h1>
+    <div>
+      <main className="">
+        <Hero/>
+        <Products/>
+        <Services/>
+        <Bookings/> 
       </main>
-      <footer className="">
-        <span className="text-xs">Copyright | {new Date().getFullYear()}</span>
-      </footer>
     </div>
   );
 }

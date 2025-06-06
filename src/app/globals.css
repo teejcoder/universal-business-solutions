@@ -142,6 +142,29 @@
     @apply w-full max-w-3xl mx-auto px-4 sm:px-6 py-6
            flex flex-col items-center;
   }
+
+    /* Full height variants */
+  .page-container-screen {
+    @apply w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 
+          min-h-screen flex flex-col items-center justify-center;
+  }
+
+  .page-container-narrow-screen {
+    @apply w-full max-w-3xl mx-auto px-4 sm:px-6 
+           h-screen flex flex-col items-center;
+  }
+
+  /* Full height with min-height fallback */
+  .page-container-full {
+    @apply w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 
+           min-h-screen flex flex-col items-center;
+  }
+
+  /* Centered full screen container */
+  .page-container-centered {
+    @apply w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 
+           h-screen flex flex-col items-center justify-center;
+  }
 }
 
 @layer components {

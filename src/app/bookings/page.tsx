@@ -1,16 +1,16 @@
-import BookingForm from '@/components/booking-form'
+import BookingForm from '@/components/bookings/booking-form'
 import React from 'react'
 
 type Props = {}
 
 export default function Bookings({}: Props) {
   return (
-    <div className='page-container section'>
-      Bookings, babe.
-
-      <div className='mx-8'>
-        <BookingForm/>
+    <div className='page-container-screen'>
+      <div>
+        Bookings page, babe.  
       </div>
+
+      <BookingForm/>
       
     </div>
   )

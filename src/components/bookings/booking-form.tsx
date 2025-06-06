@@ -14,10 +14,10 @@ import {
 } from "@/components/ui/form"
 
 import { Input } from "@/components/ui/input"
-import { Textarea } from './ui/textarea'
+import { Textarea } from '../ui/textarea'
 import { toast } from 'sonner'
-import { Popover, PopoverContent, PopoverTrigger } from './ui/popover'
-import { Calendar } from './ui/calendar'
+import { Popover, PopoverContent, PopoverTrigger } from '../ui/popover'
+import { Calendar } from '../ui/calendar'
 import { CalendarIcon, Loader, LoaderCircle, LoaderPinwheelIcon } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { format } from 'date-fns'
@@ -68,9 +68,9 @@ export default function BookingForm({}: Props) {
   }
   
   return (
-    <div className="">
+    <div className="w-full max-w-md mx-auto px-4 my-6 overflow-hidden">
       <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 card">
+        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 w-full">
           <FormField
             control={form.control}
             name="name"
