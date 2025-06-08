@@ -18,7 +18,7 @@ import { Textarea } from '../ui/textarea'
 import { toast } from 'sonner'
 import { Popover, PopoverContent, PopoverTrigger } from '../ui/popover'
 import { Calendar } from '../ui/calendar'
-import { CalendarIcon, Loader, LoaderCircle, LoaderPinwheelIcon } from 'lucide-react'
+import { CalendarIcon, Loader } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { format } from 'date-fns'
 import { TimeSelector } from './time-selector'
@@ -55,15 +55,23 @@ export default function BookingForm({}: Props) {
     })
  
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
+    if (loading) return; // Prevent multiple submissions
+
+
     try {
       setLoading(true);
       const response = await axios.post('/api/bookings', values)
-      setLoading(false);
       toast.success("Booking has been made!")
       console.log(values, response)
+      form.reset();
     }
     catch(err) {
       console.error('error in booking-form Mongo API connection', err)
+      toast.error("There was an error making the booking. Please try again later.")
+    }
+    finally {
+      setLoading(false);
+      form.reset();
     }
   }
   
@@ -197,7 +205,19 @@ export default function BookingForm({}: Props) {
               </FormItem>
             )}
           />
-          <Button type="submit" className='w-full'>Submit {loading && <Loader rotate={1} /> }</Button>
+          <Button 
+            type="submit" 
+            className='w-full'
+            disabled={loading}
+          >
+            {loading ? (
+              <>
+                Processing ... <Loader className='ml-2 h-4 w-4 animate-spin' />
+              </>
+            ) : (
+              "Book Now"
+            )}
+          </Button>
         </form>
       </Form>
     </div>
