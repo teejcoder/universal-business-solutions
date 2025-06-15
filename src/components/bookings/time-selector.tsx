@@ -22,9 +22,7 @@ export const TimeSelector = ({
     const updateTime = (newHour12: number, newMinute: number, newPeriod: "am" | "pm") => {
       const newDate = new Date(date);
       const newHour24 = newPeriod === "am" ? 
-        (newHour12 === 12 ? 0 : newHour12) : 
-        (newHour12 === 12 ? 12 : newHour12 + 12);
-      
+        (newHour12 === 12 ? 0 : newHour12) : (newHour12 === 12 ? 12 : newHour12 + 12);
       newDate.setHours(newHour24);
       newDate.setMinutes(newMinute);
       onChange(newDate);
@@ -62,7 +60,7 @@ export const TimeSelector = ({
           <SelectValue />
         </SelectTrigger>
         <SelectContent>
-          {["00",15,30,45].map((m) => (
+          {[`00`,15,30,45].map((m) => (
             <SelectItem key={m} value={String(m)}>
               {m}
             </SelectItem>

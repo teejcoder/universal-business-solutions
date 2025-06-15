@@ -29,14 +29,21 @@ type Props = {}
 
 const formSchema = z.object({
   name: z.string().min(2, 
-    {message:'Enter your Full Name'}
+    {message:"Enter your Full Name"}
   ).max(50),
   phone: z.string()
       .min(10, "Phone number must be 10 digits")
       .max(10, "Phone number is too long")
       .regex(/^[0-9+\-\s()]*$/, "Invalid phone number format"),
-  email: z.string().email(),
-  datetime: z.date(),
+  email: z.string().email("Invalid email address"),
+  datetime: z.date().refine((date) => {
+    const now = new Date();
+    return date > now;
+  },
+  {
+    message: "Booking must be in the future"
+  }
+),
   message: z.string()
 })
 
@@ -57,6 +64,12 @@ export default function BookingForm({}: Props) {
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     if (loading) return; // Prevent multiple submissions
 
+    // Additonal datetime validation:
+    const now = new Date();
+    if (values.datetime <= now){
+      toast.error("Please select a time in the future.")
+      return;
+    }
 
     try {
       setLoading(true);
@@ -67,7 +80,7 @@ export default function BookingForm({}: Props) {
     }
     catch(err) {
       console.error('error in booking-form Mongo API connection', err)
-      toast.error("There was an error making the booking. Please try again later.")
+      toast.error("There was an error making the booking. Please try again.")
     }
     finally {
       setLoading(false);
