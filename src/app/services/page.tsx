@@ -4,6 +4,6 @@ type Props = {}
 
 export default function Services({}: Props) {
   return (
-    <div>Services, babe</div>
+    <div className='page-container-screen'>Services page</div>
   )
 }

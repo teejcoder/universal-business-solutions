@@ -4,8 +4,8 @@ type Props = {}
 
 export default function Products({}: Props) {
   return (
-    <div>
-      Products page, babe
+    <div className="page-container-screen">
+      Products page
     </div>
   )
 }
