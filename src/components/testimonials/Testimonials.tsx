@@ -10,6 +10,7 @@ import {
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { getFeaturedTestimonials, testimonialStats } from "@/data/testimonials";
+import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
 
 type Props = {};
 
@@ -82,7 +83,11 @@ const Testimonials = ({}: Props) => {
                 </p>
 
                 <div className="space-y-3">
-                  <div className="flex items-center justify-between">
+                  <div className="flex items-center justify-start">
+                    <Avatar className="mr-4">
+                      <AvatarImage src={testimonial.image}/>
+                      <AvatarFallback>DP</AvatarFallback>
+                    </Avatar>
                     <div>
                       <div className="font-semibold text-foreground">
                         {testimonial.name}

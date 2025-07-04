@@ -1,6 +1,6 @@
 import React from 'react'
 import { Button } from '@/components/ui/button'
-import { ArrowRight, Phone, Mail, MessageSquare, Calendar } from 'lucide-react'
+import { Phone, Mail, MessageSquare, Calendar } from 'lucide-react'
 
 type Props = {}
 
