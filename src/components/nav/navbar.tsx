@@ -33,7 +33,7 @@ export default function Navbar() {
     };
 
     return (
-        <nav className="relative">
+        <nav className="fixed top-0 left-0 right-0 z-50 w-full">
             <div className="flex items-center justify-between p-4 border-b bg-white dark:bg-black dark:border-gray-700">
                 <Link href="/" className="font-bold text-lg md:text-xl whitespace-nowrap">
                     <h1>UBS</h1>
@@ -69,8 +69,8 @@ export default function Navbar() {
             
             {/* Mobile menu */}
             <div className={cn(
-                "absolute w-full text-center bg-white dark:bg-black shadow-md transition-all duration-300 ease-in-out border-b z-50",
-                isMenuOpen ? "max-h-60 opacity-100" : "max-h-0 opacity-0 invisible"
+                "absolute top-full left-0 w-full text-center bg-white dark:bg-black shadow-md transition-all duration-300 ease-in-out border-b z-40",
+                isMenuOpen ? "max-h-60 flex items-center justify-center text-xl opacity-100" : "max-h-0 opacity-0 invisible"
             )}>
                 <ul className="flex flex-col py-2">
                     {links.map((e, i) => (

@@ -12,8 +12,11 @@ import {
   Users,
   Calendar,
   Shield,
-  ArrowRight
+  ArrowRight,
+  Star,
+  Quote
 } from 'lucide-react'
+import { testimonials, testimonialStats } from '@/data/testimonials'
 
 type Props = {}
 
@@ -74,6 +77,48 @@ export default function Contact({}: Props) {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
         {/* Contact Form Area */}
         <div className="lg:col-span-2 space-y-6">
+          {/* Social Proof Section */}
+          <div className="mb-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+              {testimonialStats.slice(0, 3).map((stat: any, index: number) => (
+                <div key={index} className="p-4 bg-muted/30 rounded-lg text-center">
+                  <div className="text-2xl font-bold text-primary">{stat.value}</div>
+                  <div className="text-sm text-muted-foreground">{stat.label}</div>
+                </div>
+              ))}
+            </div>
+            
+            {/* Featured Testimonial */}
+            {testimonials.filter(t => t.featured)[0] && (
+              <Card className="bg-gradient-to-r from-primary/5 to-blue-50/50 border-primary/20">
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-4">
+                    <Quote className="w-8 h-8 text-primary flex-shrink-0 mt-1" />
+                    <div className="space-y-3">
+                      <p className="text-foreground italic">
+                        "{testimonials.filter(t => t.featured)[0].content}"
+                      </p>
+                      <div className="flex items-center gap-2">
+                        <div className="flex">
+                          {[...Array(5)].map((_, i) => (
+                            <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                          ))}
+                        </div>
+                        <div className="text-sm">
+                          <span className="font-medium">{testimonials.filter(t => t.featured)[0].name}</span>
+                          <span className="text-muted-foreground"> • {testimonials.filter(t => t.featured)[0].title}, {testimonials.filter(t => t.featured)[0].company}</span>
+                        </div>
+                      </div>
+                      <Badge variant="secondary" className="text-xs">
+                        {testimonials.filter(t => t.featured)[0].results}
+                      </Badge>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            )}
+          </div>
+
           <div>
             <h3 className="text-xl font-semibold text-foreground mb-2">Schedule a Consultation</h3>
             <p className="text-muted-foreground mb-6">
@@ -116,8 +161,8 @@ export default function Contact({}: Props) {
                 <p className="text-sm text-muted-foreground">
                   123 Business Avenue<br />
                   Suite 456<br />
-                  New York, NY 10001<br />
-                  United States
+                  Melbourne, Victoria, 3000.<br />
+                  Australia
                 </p>
               </div>
               <div className="pt-4 border-t">

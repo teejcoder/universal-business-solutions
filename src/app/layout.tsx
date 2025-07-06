@@ -33,7 +33,9 @@ export default function RootLayout({
       >
         <DarkModeProvider>
           <Navbar/>
-          {children}
+          <main className="pt-[73px]">
+            {children}
+          </main>
           <Toaster />
           <Footer/>
         </DarkModeProvider>

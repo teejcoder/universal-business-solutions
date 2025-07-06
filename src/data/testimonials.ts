@@ -24,7 +24,7 @@ export const testimonials: Testimonial[] = [
   {
     id: "sarah-johnson",
     name: "Sarah Johnson",
-    image: "https://images.unsplash.com/11/converse-fields.jpg?q=80&w=1377&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: "https://images.pexels.com/photos/6973758/pexels-photo-6973758.jpeg",
     title: "CEO",
     company: "TechStart Inc.",
     content: "Universal Business Solutions completely transformed our operations. Their strategic approach helped us increase revenue by 150% and streamline our processes. The team is incredibly professional and results-driven.",
@@ -36,7 +36,7 @@ export const testimonials: Testimonial[] = [
   {
     id: "michael-chen",
     name: "Michael Chen",
-    image: "https://images.unsplash.com/11/dreamcatcher.jpg?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: "https://images.pexels.com/photos/32844863/pexels-photo-32844863.jpeg",
     title: "Founder",
     company: "GreenLeaf Consulting",
     content: "Working with UBS was a game-changer for our business. They helped us develop a comprehensive digital marketing strategy that doubled our client base in just 6 months. Highly recommend their services.",
@@ -48,7 +48,7 @@ export const testimonials: Testimonial[] = [
   {
     id: "emma-rodriguez",
     name: "Emma Rodriguez",
-    image: "https://images.unsplash.com/11/dreamcatcher.jpg?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: "https://images.pexels.com/photos/32778272/pexels-photo-32778272.jpeg",
     title: "Director",
     company: "Retail Solutions Co.",
     content: "The financial planning and business optimization services provided by UBS saved our company over $200K annually. Their expertise in process improvement is unmatched. Professional, efficient, and results-focused.",

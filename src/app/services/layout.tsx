@@ -20,7 +20,7 @@ export default function ServicesLayout({children}: {
             {/* Services Navigation */}
             <div className="bg-card border-b">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <nav className="flex space-x-8 py-4">
+                    <nav className="flex space-x-8 space-y-2 flex-wrap py-4">
                         <a
                             href="/services"
                             className="text-foreground hover:text-primary font-medium transition-colors"

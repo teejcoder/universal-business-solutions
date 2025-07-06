@@ -22,7 +22,7 @@ const FinalCTA = ({}: Props) => {
               <Calendar className="mr-2 h-5 w-5" />
               Schedule Free Consultation
             </Button>
-            <Button size="lg" variant="outline" className="text-lg px-8 py-6 border-white text-white hover:bg-white hover:text-primary">
+            <Button size="lg" variant="secondary" className="text-lg px-8 py-6">
               <Phone className="mr-2 h-5 w-5" />
               Call Now: (555) 123-4567
             </Button>

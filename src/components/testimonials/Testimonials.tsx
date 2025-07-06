@@ -85,7 +85,7 @@ const Testimonials = ({}: Props) => {
                 <div className="space-y-3">
                   <div className="flex items-center justify-start">
                     <Avatar className="mr-4">
-                      <AvatarImage src={testimonial.image}/>
+                      <AvatarImage src={testimonial.image} className="object-cover"/>
                       <AvatarFallback>DP</AvatarFallback>
                     </Avatar>
                     <div>
