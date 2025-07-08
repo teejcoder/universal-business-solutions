@@ -22,12 +22,12 @@ const Hero = ({}: Props) => {
             {/* Main Headline */}
             <div className="space-y-4">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
-                Universal Business
-                <span className="block text-primary">Solutions</span>
+                Drive More
+                <span className="block text-primary">Conversions</span>
               </h1>
               <p className="text-xl text-muted-foreground max-w-lg leading-relaxed">
-                Transform your business with innovative solutions tailored to your needs. 
-                From strategy to execution, we help you achieve operational excellence and drive sustainable growth.
+                Transform your digital marketing with our cutting-edge conversion optimization platform. 
+                Turn more visitors into customers and maximize your ROI with data-driven strategies.
               </p>
             </div>
 
@@ -35,42 +35,42 @@ const Hero = ({}: Props) => {
             <div className="space-y-3">
               <div className="flex items-center gap-3">
                 <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
-                <span className="text-muted-foreground">Expert consultation and strategic planning</span>
+                <span className="text-muted-foreground">Advanced conversion tracking and analytics</span>
               </div>
               <div className="flex items-center gap-3">
                 <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
-                <span className="text-muted-foreground">Customized solutions for your industry</span>
+                <span className="text-muted-foreground">A/B testing and optimization tools</span>
               </div>
               <div className="flex items-center gap-3">
                 <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
-                <span className="text-muted-foreground">Proven track record of success</span>
+                <span className="text-muted-foreground">Proven strategies that increase conversions</span>
               </div>
             </div>
 
             {/* Call to Action */}
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Button size="lg" className="text-lg px-8 py-6">
-                Get Started Today
+                Start Converting Today
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
               <Button variant="outline" size="lg" className="text-lg px-8 py-6">
-                Schedule Consultation
+                View Demo
               </Button>
             </div>
 
             {/* Social Proof */}
             <div className="flex items-center gap-8 pt-8 border-t border-border">
               <div className="text-center">
-                <div className="text-2xl font-bold text-foreground">500+</div>
-                <div className="text-sm text-muted-foreground">Happy Clients</div>
+                <div className="text-2xl font-bold text-foreground">2.5x</div>
+                <div className="text-sm text-muted-foreground">Avg Conversion Lift</div>
               </div>
               <div className="text-center">
                 <div className="text-2xl font-bold text-foreground">98%</div>
-                <div className="text-sm text-muted-foreground">Success Rate</div>
+                <div className="text-sm text-muted-foreground">Client Success Rate</div>
               </div>
               <div className="text-center">
                 <div className="text-2xl font-bold text-foreground">24/7</div>
-                <div className="text-sm text-muted-foreground">Support</div>
+                <div className="text-sm text-muted-foreground">Optimization</div>
               </div>
             </div>
           </div>
@@ -94,24 +94,24 @@ const Hero = ({}: Props) => {
                 
                 <div className="space-y-4">
                   <div className="flex items-center justify-between">
-                    <span className="text-sm text-muted-foreground">Revenue Growth</span>
-                    <span className="text-sm font-medium text-green-600">+150%</span>
+                    <span className="text-sm text-muted-foreground">Conversion Rate</span>
+                    <span className="text-sm font-medium text-green-600">+250%</span>
                   </div>
                   <div className="w-full bg-muted rounded-full h-2">
                     <div className="bg-gradient-to-r from-green-500 to-blue-500 h-2 rounded-full w-[85%]"></div>
                   </div>
                   
                   <div className="flex items-center justify-between">
-                    <span className="text-sm text-muted-foreground">Efficiency</span>
-                    <span className="text-sm font-medium text-blue-600">+200%</span>
+                    <span className="text-sm text-muted-foreground">Lead Generation</span>
+                    <span className="text-sm font-medium text-blue-600">+300%</span>
                   </div>
                   <div className="w-full bg-muted rounded-full h-2">
                     <div className="bg-gradient-to-r from-blue-500 to-purple-500 h-2 rounded-full w-[95%]"></div>
                   </div>
                   
                   <div className="flex items-center justify-between">
-                    <span className="text-sm text-muted-foreground">Client Satisfaction</span>
-                    <span className="text-sm font-medium text-purple-600">98%</span>
+                    <span className="text-sm text-muted-foreground">ROI Improvement</span>
+                    <span className="text-sm font-medium text-purple-600">+180%</span>
                   </div>
                   <div className="w-full bg-muted rounded-full h-2">
                     <div className="bg-gradient-to-r from-purple-500 to-pink-500 h-2 rounded-full w-[98%]"></div>
@@ -120,7 +120,7 @@ const Hero = ({}: Props) => {
 
                 <div className="pt-4 border-t border-border">
                   <p className="text-sm text-muted-foreground text-center">
-                    "Outstanding results and exceptional service. They transformed our business operations completely."
+                    "ConvertOrDie increased our conversion rate by 340% in just 3 months. The ROI is incredible!"
                   </p>
                   <div className="flex items-center justify-center gap-2 mt-2">
                     <div className="flex gap-1">
@@ -128,7 +128,7 @@ const Hero = ({}: Props) => {
                         <Star key={i} className="h-4 w-4 text-yellow-500 fill-current" />
                       ))}
                     </div>
-                    <span className="text-sm text-muted-foreground">- Sarah Johnson, CEO</span>
+                    <span className="text-sm text-muted-foreground">- Sarah Johnson, Marketing Director</span>
                   </div>
                 </div>
               </div>

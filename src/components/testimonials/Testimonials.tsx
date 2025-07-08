@@ -34,11 +34,11 @@ const Testimonials = ({}: Props) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-foreground mb-4">
-            What Our Clients Say
+            Real Results from Real Clients
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Don't just take our word for it. Here's what business leaders have
-            to say about working with us.
+            See how ConvertOrDie has helped businesses like yours dramatically increase 
+            their conversion rates and revenue.
           </p>
         </div>
 
@@ -115,15 +115,14 @@ const Testimonials = ({}: Props) => {
         {/* Call to Action */}
         <div className="bg-card border rounded-2xl p-8 text-center">
           <h3 className="text-2xl font-bold text-foreground mb-4">
-            Ready to Join Our Success Stories?
+            Ready to Get Similar Results?
           </h3>
           <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-            Let us help you achieve similar results. Schedule a free
-            consultation to discuss your business goals and see how we can help
-            you grow.
+            Join hundreds of businesses that have transformed their conversion rates with ConvertOrDie. 
+            Start your free conversion audit today and see what's possible.
           </p>
           <Button size="lg" className="text-lg px-8 py-6">
-            Get Your Free Consultation
+            Get Your Free Conversion Audit
             <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
         </div>

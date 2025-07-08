@@ -8,43 +8,43 @@ const WhyChooseUs = ({}: Props) => {
   const advantages = [
     {
       icon: Users,
-      title: "Expert Team",
-      description: "Our certified professionals bring years of industry experience and proven expertise to every project."
+      title: "Conversion Experts",
+      description: "Our certified CRO specialists have optimized thousands of websites across every industry and traffic source."
     },
     {
       icon: Target,
-      title: "Results-Driven",
-      description: "We focus on measurable outcomes and ROI, ensuring your investment delivers tangible business value."
+      title: "Data-Driven Results",
+      description: "Every optimization is backed by rigorous A/B testing and statistical analysis for guaranteed improvements."
     },
     {
       icon: Clock,
-      title: "Fast Turnaround",
-      description: "Efficient processes and dedicated project management ensure timely delivery without compromising quality."
+      title: "Rapid Implementation",
+      description: "See conversion improvements within 30 days with our proven optimization framework and agile testing process."
     },
     {
       icon: Shield,
-      title: "Trusted Partner",
-      description: "500+ successful projects and 98% client satisfaction rate demonstrate our commitment to excellence."
+      title: "ROI Guarantee",
+      description: "Minimum 2x ROI or your money back. We're so confident in our methods, we guarantee results."
     },
     {
       icon: Award,
-      title: "Industry Recognition",
-      description: "Award-winning solutions and certified methodologies that have been recognized by industry leaders."
+      title: "Industry Leading",
+      description: "Recognized as top conversion optimization experts with award-winning strategies and methodologies."
     },
     {
       icon: CheckCircle,
-      title: "Ongoing Support",
-      description: "24/7 support and continuous optimization to ensure your solutions perform at their best."
+      title: "Continuous Optimization",
+      description: "24/7 monitoring and continuous testing to ensure your conversion rates keep improving over time."
     }
   ]
 
   const differentiators = [
-    "Customized solutions tailored to your industry and business size",
-    "Transparent pricing with no hidden fees or unexpected costs",
-    "Dedicated account manager for personalized service",
-    "Proven methodologies backed by industry best practices",
-    "Flexible engagement models to fit your budget and timeline",
-    "Comprehensive training and knowledge transfer included"
+    "Custom conversion strategies tailored to your industry and audience",
+    "Transparent pricing with guaranteed ROI - no hidden fees",
+    "Dedicated conversion specialist assigned to your account",
+    "Proven methodologies backed by thousands of successful tests",
+    "Real-time reporting and analytics dashboards for full transparency",
+    "Complete testing setup and optimization roadmap included"
   ]
 
   return (
@@ -52,10 +52,10 @@ const WhyChooseUs = ({}: Props) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-foreground mb-4">
-            Why Choose Universal Business Solutions?
+            Why Choose ConvertOrDie?
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            We're not just another consulting firm. Here's what sets us apart and makes us the right choice for your business.
+            We're not just another optimization agency. Here's what sets us apart and makes us the right choice for maximizing your conversions.
           </p>
         </div>
 
@@ -96,41 +96,40 @@ const WhyChooseUs = ({}: Props) => {
           {/* Right Column - Company Info */}
           <div className="bg-card border rounded-2xl p-8">
             <h3 className="text-2xl font-bold text-foreground mb-6">
-              About Universal Business Solutions
+              About ConvertOrDie
             </h3>
             <div className="space-y-4 text-muted-foreground">
               <p>
-                Founded with a mission to help businesses thrive in today's competitive landscape, 
-                Universal Business Solutions brings together industry experts, innovative methodologies, 
-                and cutting-edge technology to deliver transformative results.
+                Founded by conversion optimization experts with a mission to help businesses maximize their revenue, 
+                ConvertOrDie brings together data scientists, UX designers, and conversion specialists 
+                to deliver measurable results that directly impact your bottom line.
               </p>
               <p>
-                Our team of certified professionals has collectively helped over 500 businesses 
-                achieve their goals, from startups looking to scale to established enterprises 
-                seeking operational excellence.
+                Our team has collectively optimized over 2,000 websites and generated over $500M in additional 
+                revenue for our clients through systematic testing and optimization of conversion funnels.
               </p>
               <p>
-                We believe in building long-term partnerships with our clients, providing not just 
-                solutions, but ongoing support and strategic guidance to ensure sustained success.
+                We believe in a data-driven approach where every change is tested and validated before implementation, 
+                ensuring that your conversion rates continuously improve over time.
               </p>
             </div>
 
             <div className="grid grid-cols-2 gap-6 mt-8 pt-6 border-t border-border">
               <div className="text-center">
-                <div className="text-2xl font-bold text-primary mb-1">10+</div>
-                <div className="text-sm text-muted-foreground">Years Experience</div>
+                <div className="text-2xl font-bold text-primary mb-1">2,000+</div>
+                <div className="text-sm text-muted-foreground">Sites Optimized</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-primary mb-1">15+</div>
-                <div className="text-sm text-muted-foreground">Industries Served</div>
+                <div className="text-2xl font-bold text-primary mb-1">$500M+</div>
+                <div className="text-sm text-muted-foreground">Revenue Generated</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-primary mb-1">50+</div>
-                <div className="text-sm text-muted-foreground">Team Members</div>
+                <div className="text-2xl font-bold text-primary mb-1">2.8x</div>
+                <div className="text-sm text-muted-foreground">Avg Conversion Lift</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-primary mb-1">99%</div>
-                <div className="text-sm text-muted-foreground">Client Retention</div>
+                <div className="text-2xl font-bold text-primary mb-1">30 days</div>
+                <div className="text-sm text-muted-foreground">Time to Results</div>
               </div>
             </div>
           </div>

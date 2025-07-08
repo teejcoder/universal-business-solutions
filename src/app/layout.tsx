@@ -17,8 +17,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Universal Business Solutions.",
-  description: "A modern, accessible, and mobile-optimised website for business.",
+  title: "ConvertOrDie - Driving Conversions Platform",
+  description: "Transform your digital marketing with our cutting-edge conversion optimization platform. Drive more leads, increase sales, and maximize ROI.",
 };
 
 export default function RootLayout({

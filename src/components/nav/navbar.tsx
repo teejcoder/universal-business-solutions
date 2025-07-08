@@ -8,11 +8,11 @@ import { DarkModeToggle } from "@/components/ui/dark-mode-toggle";
 
 const links = [
     {
-        title: 'Services',
+        title: 'Optimization',
         link: '/services'
     },
     {
-        title: 'Products',
+        title: 'Tools',
         link: '/products'
     },
     {
@@ -36,7 +36,7 @@ export default function Navbar() {
         <nav className="fixed top-0 left-0 right-0 z-50 w-full">
             <div className="flex items-center justify-between p-4 border-b bg-white dark:bg-black dark:border-gray-700">
                 <Link href="/" className="font-bold text-lg md:text-xl whitespace-nowrap">
-                    <h1>UBS</h1>
+                    <h1>ConvertOrDie</h1>
                 </Link>
                 
                 {/* Desktop navigation */}

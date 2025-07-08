@@ -13,12 +13,13 @@ const Products = ({}: Props) => {
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         {/* Header */}
         <div className='text-center mb-12'>
-          <Badge variant="outline" className="mb-4">Our Solutions</Badge>
+          <Badge variant="outline" className="mb-4">Conversion Tools</Badge>
           <h2 className='text-3xl md:text-4xl font-bold text-foreground mb-4'>
-            Comprehensive Business Solutions
+            Conversion Optimization Solutions
           </h2>
           <p className='text-lg text-muted-foreground max-w-2xl mx-auto'>
-            From strategy to execution, we provide end-to-end solutions to help your business thrive in today's competitive landscape.
+            Powerful tools and strategies designed to turn your website visitors into paying customers. 
+            From landing page optimization to advanced analytics, maximize your conversion rates.
           </p>
         </div>
 
@@ -29,14 +30,14 @@ const Products = ({}: Props) => {
               <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
                 <TrendingUp className="w-6 h-6 text-primary" />
               </div>
-              <CardTitle className="text-xl">Business Consulting</CardTitle>
+              <CardTitle className="text-xl">Conversion Rate Optimization</CardTitle>
             </CardHeader>
             <CardContent>
               <p className="text-muted-foreground mb-4">
-                Strategic planning and operational optimization to drive sustainable growth for your business.
+                A/B testing, heat mapping, and user journey analysis to maximize your website's conversion potential.
               </p>
               <div className="flex items-center justify-between">
-                <span className="text-2xl font-bold text-primary">From $2,500</span>
+                <span className="text-2xl font-bold text-primary">From $1,999</span>
                 <Button variant="ghost" size="sm" className="group-hover:bg-primary/10">
                   Learn More <ArrowRight className="w-4 h-4 ml-1" />
                 </Button>
@@ -49,14 +50,14 @@ const Products = ({}: Props) => {
               <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
                 <Users className="w-6 h-6 text-primary" />
               </div>
-              <CardTitle className="text-xl">Digital Marketing</CardTitle>
+              <CardTitle className="text-xl">Landing Page Optimization</CardTitle>
             </CardHeader>
             <CardContent>
               <p className="text-muted-foreground mb-4">
-                Complete digital marketing solutions including SEO, social media, and content strategy.
+                Custom landing page design and optimization to maximize conversions from your marketing campaigns.
               </p>
               <div className="flex items-center justify-between">
-                <span className="text-2xl font-bold text-primary">From $1,800</span>
+                <span className="text-2xl font-bold text-primary">From $1,499</span>
                 <Button variant="ghost" size="sm" className="group-hover:bg-primary/10">
                   Learn More <ArrowRight className="w-4 h-4 ml-1" />
                 </Button>
@@ -69,14 +70,14 @@ const Products = ({}: Props) => {
               <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
                 <Shield className="w-6 h-6 text-primary" />
               </div>
-              <CardTitle className="text-xl">Financial Planning</CardTitle>
+              <CardTitle className="text-xl">Analytics & Tracking</CardTitle>
             </CardHeader>
             <CardContent>
               <p className="text-muted-foreground mb-4">
-                Professional financial planning and investment strategy development for long-term success.
+                Advanced conversion tracking, attribution modeling, and performance analytics to optimize your funnel.
               </p>
               <div className="flex items-center justify-between">
-                <span className="text-2xl font-bold text-primary">From $3,200</span>
+                <span className="text-2xl font-bold text-primary">From $999</span>
                 <Button variant="ghost" size="sm" className="group-hover:bg-primary/10">
                   Learn More <ArrowRight className="w-4 h-4 ml-1" />
                 </Button>
@@ -89,16 +90,16 @@ const Products = ({}: Props) => {
         <div className='bg-muted/50 rounded-2xl p-8 mb-16'>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8 text-center'>
             <div>
-              <div className='text-3xl font-bold text-foreground mb-2'>500+</div>
-              <div className='text-muted-foreground'>Happy Clients</div>
+              <div className='text-3xl font-bold text-foreground mb-2'>3.5x</div>
+              <div className='text-muted-foreground'>Average Conversion Increase</div>
             </div>
             <div>
-              <div className='text-3xl font-bold text-foreground mb-2'>95%</div>
-              <div className='text-muted-foreground'>Success Rate</div>
+              <div className='text-3xl font-bold text-foreground mb-2'>250%</div>
+              <div className='text-muted-foreground'>ROI Improvement</div>
             </div>
             <div>
-              <div className='text-3xl font-bold text-foreground mb-2'>24/7</div>
-              <div className='text-muted-foreground'>Support Available</div>
+              <div className='text-3xl font-bold text-foreground mb-2'>72hr</div>
+              <div className='text-muted-foreground'>Setup Time</div>
             </div>
           </div>
         </div>
@@ -106,18 +107,18 @@ const Products = ({}: Props) => {
         {/* Call to Action */}
         <div className='text-center bg-gradient-to-r from-primary/10 to-primary/5 rounded-2xl p-8'>
           <h3 className='text-2xl font-bold text-foreground mb-4'>
-            Ready to Transform Your Business?
+            Ready to Maximize Your Conversions?
           </h3>
           <p className='text-muted-foreground mb-6 max-w-2xl mx-auto'>
-            Get started with a free consultation and discover how our solutions can help you achieve your business goals.
+            Start your free trial today and see how ConvertOrDie can transform your website into a conversion machine.
           </p>
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>
             <Button size="lg" className="min-w-[200px]">
-              Get Free Consultation
+              Start Free Trial
             </Button>
             <Link href="/products">
               <Button variant="outline" size="lg" className="min-w-[200px]">
-                View All Products
+                View All Tools
               </Button>
             </Link>
           </div>

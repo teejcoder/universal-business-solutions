@@ -25,11 +25,11 @@ export const testimonials: Testimonial[] = [
     id: "sarah-johnson",
     name: "Sarah Johnson",
     image: "https://images.pexels.com/photos/6973758/pexels-photo-6973758.jpeg",
-    title: "CEO",
+    title: "Marketing Director",
     company: "TechStart Inc.",
-    content: "Universal Business Solutions completely transformed our operations. Their strategic approach helped us increase revenue by 150% and streamline our processes. The team is incredibly professional and results-driven.",
+    content: "ConvertOrDie completely transformed our conversion rates. Their A/B testing approach helped us increase our lead conversion by 340% and reduced our customer acquisition cost by 60%. The ROI is absolutely incredible.",
     rating: 5,
-    results: "150% revenue increase",
+    results: "340% conversion increase",
     industry: "Technology",
     featured: true
   },
@@ -37,24 +37,24 @@ export const testimonials: Testimonial[] = [
     id: "michael-chen",
     name: "Michael Chen",
     image: "https://images.pexels.com/photos/32844863/pexels-photo-32844863.jpeg",
-    title: "Founder",
-    company: "GreenLeaf Consulting",
-    content: "Working with UBS was a game-changer for our business. They helped us develop a comprehensive digital marketing strategy that doubled our client base in just 6 months. Highly recommend their services.",
+    title: "E-commerce Manager",
+    company: "GreenLeaf Store",
+    content: "Working with ConvertOrDie was a game-changer for our online store. Their landing page optimization increased our e-commerce conversion rate by 280% and our average order value by 45% in just 6 months.",
     rating: 5,
-    results: "200% client growth",
-    industry: "Consulting",
+    results: "280% conversion increase",
+    industry: "E-commerce",
     featured: true
   },
   {
     id: "emma-rodriguez",
     name: "Emma Rodriguez",
     image: "https://images.pexels.com/photos/32778272/pexels-photo-32778272.jpeg",
-    title: "Director",
-    company: "Retail Solutions Co.",
-    content: "The financial planning and business optimization services provided by UBS saved our company over $200K annually. Their expertise in process improvement is unmatched. Professional, efficient, and results-focused.",
+    title: "Growth Marketing Lead",
+    company: "SaaS Solutions Co.",
+    content: "ConvertOrDie's conversion optimization completely transformed our SaaS signup flow. We increased our trial-to-paid conversion rate by 190% and reduced our churn by 35%. The data-driven approach is incredible.",
     rating: 5,
-    results: "$200K annual savings",
-    industry: "Retail",
+    results: "190% conversion increase",
+    industry: "SaaS",
     featured: true
   },
   {
@@ -98,21 +98,21 @@ export const testimonials: Testimonial[] = [
 export const testimonialStats: StatItem[] = [
   {
     icon: "Users",
-    value: "500+",
-    label: "Happy Clients",
-    description: "Businesses transformed"
+    value: "2.8x",
+    label: "Avg Conversion Lift",
+    description: "Across all clients"
   },
   {
     icon: "TrendingUp",
-    value: "98%",
-    label: "Success Rate",
-    description: "Project completion"
+    value: "280%",
+    label: "ROI Increase",
+    description: "Average improvement"
   },
   {
     icon: "Award",
-    value: "5★",
-    label: "Average Rating",
-    description: "Client satisfaction"
+    value: "30 days",
+    label: "Time to Results",
+    description: "See improvements fast"
   }
 ]
 

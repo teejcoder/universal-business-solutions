@@ -5,8 +5,9 @@ import {
   Download,
   Filter
 } from "lucide-react";
-import BookingsData from "@/components/admin/BookingsData";
+import BookingsDataWithErrorHandling from "@/components/admin/BookingsDataWithErrorHandling";
 import BookingsLoadingSpinner from "@/components/admin/BookingsLoadingSpinner";
+import AdminErrorBoundary from "@/components/admin/AdminErrorBoundary";
 
 export default function Admin() {
   return (
@@ -17,7 +18,7 @@ export default function Admin() {
           <div>
             <h1 className="text-3xl font-bold text-foreground">Admin Dashboard</h1>
             <p className="text-muted-foreground">
-              Manage bookings and monitor business performance
+              Manage conversion audits and monitor platform performance
             </p>
           </div>
           <div className="flex gap-2">
@@ -32,10 +33,12 @@ export default function Admin() {
           </div>
         </div>
 
-        {/* Suspense Boundary for Booking Data */}
-        <Suspense fallback={<BookingsLoadingSpinner />}>
-          <BookingsData />
-        </Suspense>
+        {/* Error Boundary with Suspense for Booking Data */}
+        <AdminErrorBoundary>
+          <Suspense fallback={<BookingsLoadingSpinner />}>
+            <BookingsDataWithErrorHandling />
+          </Suspense>
+        </AdminErrorBoundary>
       </div>
     </div>
   );
