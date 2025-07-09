@@ -1,6 +1,7 @@
 import React from 'react'
 import { Button } from '@/components/ui/button'
 import { ArrowRight, CheckCircle, Star, TrendingUp } from 'lucide-react'
+import Link from 'next/link'
 
 type Props = {}
 
@@ -49,13 +50,17 @@ const Hero = ({}: Props) => {
 
             {/* Call to Action */}
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <Button size="lg" className="text-lg px-8 py-6">
-                Start Converting Today
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8 py-6">
-                View Demo
-              </Button>
+              <Link href="/contact">
+                <Button size="lg" className="text-lg px-8 py-6">
+                  Start Converting Today
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </Link>
+              <Link href="/products">
+                <Button variant="outline" size="lg" className="text-lg px-8 py-6">
+                  View Demo
+                </Button>
+              </Link>
             </div>
 
             {/* Social Proof */}

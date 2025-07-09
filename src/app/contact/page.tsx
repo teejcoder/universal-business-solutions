@@ -3,11 +3,11 @@ import React from 'react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
-import { 
-  Mail, 
-  Phone, 
-  MapPin, 
-  Clock, 
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Clock,
   MessageSquare,
   Users,
   Calendar,
@@ -17,10 +17,11 @@ import {
   Quote
 } from 'lucide-react'
 import { testimonials, testimonialStats } from '@/data/testimonials'
+import ExtendedCTA from '@/components/cta/ExtendedCTA'
 
 type Props = {}
 
-export default function Contact({}: Props) {
+export default function Contact({ }: Props) {
   return (
     <div className="space-y-12">
       {/* Hero Section */}
@@ -30,7 +31,7 @@ export default function Contact({}: Props) {
           Ready to Transform Your Business?
         </h2>
         <p className="text-muted-foreground max-w-2xl mx-auto">
-          We're here to help you succeed. Reach out to our team of experts for personalized solutions 
+          We're here to help you succeed. Reach out to our team of experts for personalized solutions
           or schedule a consultation to discuss your specific needs.
         </p>
       </div>
@@ -48,7 +49,7 @@ export default function Contact({}: Props) {
               <p className="text-xs text-muted-foreground">Mon-Fri 9AM-6PM</p>
             </div>
           </div>
-          
+
           <div className="flex items-center gap-3 text-center md:text-left justify-center md:justify-start">
             <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
               <Mail className="w-6 h-6 text-primary" />
@@ -59,7 +60,7 @@ export default function Contact({}: Props) {
               <p className="text-xs text-muted-foreground">Response within 24hrs</p>
             </div>
           </div>
-          
+
           <div className="flex items-center gap-3 text-center md:text-left justify-center md:justify-start">
             <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
               <Calendar className="w-6 h-6 text-primary" />
@@ -87,7 +88,7 @@ export default function Contact({}: Props) {
                 </div>
               ))}
             </div>
-            
+
             {/* Featured Testimonial */}
             {testimonials.filter(t => t.featured)[0] && (
               <Card className="bg-gradient-to-r from-primary/5 to-blue-50/50 border-primary/20">
@@ -122,13 +123,13 @@ export default function Contact({}: Props) {
           <div>
             <h3 className="text-xl font-semibold text-foreground mb-2">Schedule a Consultation</h3>
             <p className="text-muted-foreground mb-6">
-              Fill out the form below to book a free consultation with our experts. We'll discuss your 
+              Fill out the form below to book a free consultation with our experts. We'll discuss your
               business needs and how we can help you achieve your goals.
             </p>
           </div>
-          
-          <BookingForm/>
-          
+
+          <BookingForm />
+
           {/* Alternative Contact Methods */}
           <div className="mt-8 p-6 bg-muted/30 rounded-lg">
             <h4 className="font-semibold text-foreground mb-4">Prefer to reach out directly?</h4>
@@ -190,7 +191,7 @@ export default function Contact({}: Props) {
                     <p className="text-xs text-muted-foreground">Questions about our services</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start gap-3">
                   <Calendar className="w-4 h-4 text-primary mt-1" />
                   <div>
@@ -198,7 +199,7 @@ export default function Contact({}: Props) {
                     <p className="text-xs text-muted-foreground">Schedule a free consultation</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start gap-3">
                   <Shield className="w-4 h-4 text-primary mt-1" />
                   <div>
@@ -270,39 +271,17 @@ export default function Contact({}: Props) {
       </div>
 
       {/* Call to Action Footer */}
-      <div className="text-center bg-gradient-to-r from-primary/10 to-primary/5 rounded-2xl p-8 space-y-6">
-        <div className="space-y-4">
-          <h3 className="text-2xl font-bold text-foreground">
-            Ready to Get Started?
-          </h3>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            Join hundreds of businesses that have transformed their operations with our expert solutions. 
-            Let's discuss how we can help you achieve your goals.
-          </p>
-        </div>
-        
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button size="lg" className="min-w-[200px]">
-            Schedule Free Consultation
-            <ArrowRight className="w-4 h-4 ml-2" />
-          </Button>
-          <Button variant="outline" size="lg" className="min-w-[200px]">
-            Download Service Brochure
-          </Button>
-        </div>
-        
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center text-sm">
-          <Badge variant="outline">
-            ✓ Free initial consultation
-          </Badge>
-          <Badge variant="outline">
-            ✓ No obligation
-          </Badge>
-          <Badge variant="outline">
-            ✓ Expert advice
-          </Badge>
-        </div>
-      </div>
+      <ExtendedCTA
+        title='Ready to Get Started?'
+        description="Join hundreds of businesses that have transformed their operations with our expert solutions. Let's discuss how we can help you achieve your goals."
+        primaryButtonText='Schedule Free Consultation'
+        primaryButtonHref='/contact'
+        secondaryButtonText='Download Service Brochure'
+        secondaryButtonHref='/products'
+        badge1='✓ Free initial consultation'
+        badge2='✓ No obligation'
+        badge3='✓ Expert Advice'
+      />
     </div>
   )
 }

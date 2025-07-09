@@ -5,7 +5,7 @@ import Services from "@/components/services/Services";
 import FAQ from "@/components/faq/FAQ";
 import Testimonials from "@/components/testimonials/Testimonials";
 import WhyChooseUs from "@/components/why-choose-us/WhyChooseUs";
-import FinalCTA from "@/components/cta/FinalCTA";
+import FinalCTABanner from "@/components/cta/FinalCTABanner";
 
 export default function Home() {
 
@@ -19,7 +19,7 @@ export default function Home() {
         <FAQ/>
         <Testimonials/>
         <WhyChooseUs/>
-        <FinalCTA/>
+        <FinalCTABanner/>
       </main>
     </div>
   );

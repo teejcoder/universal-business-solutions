@@ -4,7 +4,7 @@ import { Phone, Mail, MessageSquare, Calendar } from 'lucide-react'
 
 type Props = {}
 
-const FinalCTA = ({}: Props) => {
+const FinalCTABanner = ({}: Props) => {
   return (
     <section className="py-16 bg-gradient-to-r from-primary to-blue-600 text-white">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -59,4 +59,4 @@ const FinalCTA = ({}: Props) => {
   )
 }
 
-export default FinalCTA
+export default FinalCTABanner

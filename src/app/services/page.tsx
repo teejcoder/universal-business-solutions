@@ -10,12 +10,10 @@ import {
   Shield, 
   CheckCircle, 
   Clock, 
-  Star,
-  ArrowRight,
-  Lightbulb,
-  BarChart3,
-  Settings
+  Lightbulb
 } from 'lucide-react'
+import Link from 'next/link'
+import ExtendedCTA from '@/components/cta/ExtendedCTA'
 
 type Props = {}
 
@@ -136,12 +134,16 @@ export default function Services({}: Props) {
                 <div className="flex items-center justify-between pt-4 border-t">
                   <span className="text-lg font-bold text-primary">{service.price}</span>
                   <div className="flex gap-2">
-                    <Button variant="outline" size="sm">
-                      Learn More
-                    </Button>
-                    <Button size="sm">
-                      Get Quote
-                    </Button>
+                    <Link href="/services">
+                      <Button variant="outline" size="sm">
+                        Learn More
+                      </Button>
+                    </Link>
+                    <Link href="/contact">
+                      <Button size="sm">
+                        Get Quote
+                      </Button>
+                    </Link>
                   </div>
                 </div>
               </CardContent>
@@ -222,31 +224,7 @@ export default function Services({}: Props) {
         </div>
       </div>
 
-      {/* CTA Section */}
-      <div className="text-center bg-gradient-to-r from-primary/10 to-primary/5 rounded-2xl p-8 space-y-6">
-        <div className="space-y-4">
-          <h3 className="text-2xl font-bold text-foreground">
-            Ready to Transform Your Business?
-          </h3>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            Schedule a free consultation with our experts to discuss your specific needs and discover how our services can help you achieve your business goals.
-          </p>
-        </div>
-        
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button size="lg" className="min-w-[200px]">
-            Schedule Free Consultation
-            <ArrowRight className="w-4 h-4 ml-2" />
-          </Button>
-          <Button variant="outline" size="lg" className="min-w-[200px]">
-            Download Service Brochure
-          </Button>
-        </div>
-        
-        <div className="text-sm text-muted-foreground">
-          <p>✓ Free 30-minute consultation • ✓ No obligation • ✓ Expert advice</p>
-        </div>
-      </div>
+      <ExtendedCTA/>
     </div>
   )
 }

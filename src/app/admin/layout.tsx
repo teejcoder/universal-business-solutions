@@ -151,7 +151,7 @@ export default function AdminLayout({
         <div className="px-4 py-3">
           <div className="flex flex-col sm:flex-row justify-between items-center flex-wrap gap-4">
             <div className="flex items-center gap-4 text-sm text-muted-foreground">
-              <span>© 2025 Universal Business Solutions</span>
+              <span>© {new Date().getFullYear()} ConvertOrDie</span>
               <span className="hidden sm:inline">•</span>
               <span className="hidden sm:inline">Admin Dashboard v1.0</span>
             </div>
@@ -163,7 +163,7 @@ export default function AdminLayout({
                 Support
               </a>
               <Badge variant="outline" className="text-xs">
-                Last updated: 3 July 2025
+                Last updated: 9 July 2025
               </Badge>
             </div>
           </div>
