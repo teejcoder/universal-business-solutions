@@ -5,7 +5,7 @@ import Services from "@/components/services/Services";
 import FAQ from "@/components/faq/FAQ";
 import Testimonials from "@/components/testimonials/Testimonials";
 import WhyChooseUs from "@/components/why-choose-us/WhyChooseUs";
-import FinalCTA from "@/components/final-cta/FinalCTA";
+import FinalCTA from "@/components/cta/FinalCTA";
 
 export default function Home() {
 

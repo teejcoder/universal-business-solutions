@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { ArrowRight, Clock, CheckCircle, Users, Zap, Target, Headphones } from 'lucide-react'
+import ConversionCTA from '../cta/ConversionCTA'
 
 type Props = {}
 
@@ -179,23 +180,14 @@ const Services = ({}: Props) => {
           </div>
         </div>
 
-        {/* Call to Action */}
-        <div className='text-center bg-gradient-to-r from-primary/10 to-primary/5 rounded-2xl p-8'>
-          <h3 className='text-2xl font-bold text-foreground mb-4'>
-            Ready to Boost Your Conversions?
-          </h3>
-          <p className='text-muted-foreground mb-6 max-w-2xl mx-auto'>
-            Book a free conversion audit with our experts and discover how we can increase your conversion rates.
-          </p>
-          <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-            <Button size="lg" className="min-w-[200px]">
-              Get Free Audit
-            </Button>
-            <Button variant="outline" size="lg" className="min-w-[200px]">
-              View Pricing
-            </Button>
-          </div>
-        </div>
+        <ConversionCTA 
+          title='Ready to Boost Your Conversions?'
+          description='Book a free conversion audit with our experts and discover how we can increase your conversion rates.'
+          primaryButtonHref='/contact'
+          primaryButtonText='Get Free Audit'
+          secondaryButtonHref='/products'
+          secondaryButtonText='View Pricing'
+        />
       </div>
     </section>
   )

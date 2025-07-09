@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { ArrowRight, Star, Users, TrendingUp, Shield } from 'lucide-react'
 import Link from 'next/link'
+import ConversionCTA from '@/components/cta/ConversionCTA'
 
 type Props = {}
 
@@ -105,24 +106,7 @@ const Products = ({}: Props) => {
         </div>
 
         {/* Call to Action */}
-        <div className='text-center bg-gradient-to-r from-primary/10 to-primary/5 rounded-2xl p-8'>
-          <h3 className='text-2xl font-bold text-foreground mb-4'>
-            Ready to Maximize Your Conversions?
-          </h3>
-          <p className='text-muted-foreground mb-6 max-w-2xl mx-auto'>
-            Start your free trial today and see how ConvertOrDie can transform your website into a conversion machine.
-          </p>
-          <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-            <Button size="lg" className="min-w-[200px]">
-              Start Free Trial
-            </Button>
-            <Link href="/products">
-              <Button variant="outline" size="lg" className="min-w-[200px]">
-                View All Tools
-              </Button>
-            </Link>
-          </div>
-        </div>
+        <ConversionCTA />
       </div>
     </section>
   )
