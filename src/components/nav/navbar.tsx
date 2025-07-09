@@ -8,11 +8,11 @@ import { DarkModeToggle } from "@/components/ui/dark-mode-toggle";
 
 const links = [
     {
-        title: 'Optimization',
+        title: 'Services',
         link: '/services'
     },
     {
-        title: 'Tools',
+        title: 'Products',
         link: '/products'
     },
     {
